@@ -1,0 +1,19 @@
+C007	00			jmp		start	
+0000	01	i		dw				i=0
+0001	02	one		dw		
+0012	03	size	dw				size=19
+3000	04	adit	dw				load helper
+0000	05	temp	dw		
+1800	06			printH
+3003	07	start	load	size	if (i>size) xit
+6001	08			sub		i	
+E013	09			jmpl	xit	
+D013	0A			jmpe	xit	
+3004	0B			load	adit	
+5001	0C			add		i	
+4005	0D			store	temp	
+3001	0E			load	i	
+5002	0F			add		one	
+4001	10			store	i	
+C005	11			jmp		start	
+0000	12	xit

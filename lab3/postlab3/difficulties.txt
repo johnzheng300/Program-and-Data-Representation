@@ -1,0 +1,1 @@
+For this lab, the hardest thing was the syntax of c++. The logic, for the most part, was pretty intuitive. I spent most of the time fixing compiler errors. Also, the variable names i created were pretty confusing and that took a while to set straight. 

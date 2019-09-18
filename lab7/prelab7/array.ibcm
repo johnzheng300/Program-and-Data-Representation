@@ -1,0 +1,37 @@
+C00F	00			jmp		start	jump to start
+0000	01	i		dw				i=0 
+0003	02	size	dw				size=3
+0000	03	max		dw		
+3000	04	adit	dw		
+0000	05	current	dw		
+0001	06	one		dw		
+0000	07	zero	dw		
+0009	08	array	dw				int array[]
+0001	09	array[0]dw				array[0]=1
+0000	0A	array[1]dw				array[1]=0
+ffff	0B	array[2]dw				array[2]=-1
+0000	0C
+0000	0D
+0000	0E
+3002	0F	start	load	size	load array size
+6001	10			sub	i			subtract I from accum
+E022	11			jmpl	xit		if (I > size) xit
+D022	12			jmpe	xit		if (I == size) xit
+3004	13			load	adit	form the instruction to add array[i]
+5008	14			add		array	
+5001	15			add		i	
+4017	16			store 	doit	plant instruciton into program
+0000	17	doit	dw		
+4005	18			store 	current	current = array[i]
+6003	19			sub		max		subtract max from array[i]
+E01E	1A			jmpl	endl	if array[i] <= max goto endl
+D01E	1B			jmpe	endl	
+3005	1C			load	current	load current into accum
+4003	1D			store 	max		max = accum
+3001	1E	endl	load	i		i++
+5006	1F			add		1	
+4001	20			store 	i	
+C00F	21			jmp		start	
+3003	22	xit		load	max		loads max
+1800	23			printH	max	
+0000	24			halt		

@@ -1,0 +1,2 @@
+john zheng jz5pt 11/25/19 postlab1.question.txt
+Why is the main methond in this file and not in a separate test.cpp file?

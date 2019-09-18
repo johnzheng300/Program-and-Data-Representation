@@ -1,0 +1,2 @@
+John zheng jz5pt 11/25/19 lifecycle.questions.txt
+in TestLifeCycle.cpp why do we include the header file instead of LifeCycle.cpp where we define the methods? 
